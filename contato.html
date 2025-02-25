@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mais Sabor Refrigerantes - Os melhores sabores para você">
+    <meta name="keywords" content="refrigerantes, bebidas, sabores, refresco">
+    <meta name="author" content="Mais Sabor">
+    <title>Mais Sabor Refrigerantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluindo FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <style>
+        .flavor-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .flavor-card:hover {
+            transform: scale(1.1);
+        }
+
+        /* Gradiente moderno para o menu */
+        .navbar {
+            background: linear-gradient(45deg, #1E3A8A, #2563EB, #3B82F6); /* Azul vibrante */
+        }
+
+        /* Gradiente no menu mobile */
+        #mobile-menu {
+            background: linear-gradient(45deg, #1E3A8A, #2563EB, #3B82F6);
+        }
+
+        /* Gradiente para os links */
+        .navbar a {
+            color: #fff; /* Mantém o texto branco */
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #fbbf24; /* Cor amarela ao passar o mouse */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white py-4 shadow-lg navbar">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <!-- Redes Sociais -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-green-400 transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="tel:+5511999999999" class="hover:text-blue-400 transition"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+
+            <!-- Itens do Menu -->
+            <ul class="hidden md:flex space-x-6 text-lg font-medium">
+                <li><a href="#services" class="hover:text-yellow-400 transition">Produtos</a></li>
+                <li><a href="#about" class="hover:text-yellow-400 transition">Quem Somos</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">Venda</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">Contato</a></li>
+            </ul>
+
+            <!-- Logo -->
+            <div>
+                <img src="/img/logo.png" alt="Logo da Empresa" class="w-24">
+            </div>
+
+            <!-- Botão de Menu Mobile -->
+            <button class="md:hidden text-white text-2xl focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden flex flex-col items-center text-white text-lg p-4 space-y-2">
+            <a href="#" class="py-2 hover:text-yellow-400">Produtos</a>
+            <a href="#" class="py-2 hover:text-yellow-400">Quem Somos</a>
+            <a href="#" class="py-2 hover:text-yellow-400">Venda</a>
+            <a href="#" class="py-2 hover:text-yellow-400">Contato</a>
+            
+            <!-- Ícones das redes sociais -->
+            <div class="flex space-x-4 mt-4">
+                <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="hover:text-green-400 transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="tel:+5511999999999" class="hover:text-blue-400 transition"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="text-center p-10">
+        <h2 class="text-3xl font-bold">Sabores incríveis para todos os momentos</h2>
+        <p class="text-lg text-gray-600">Experimente o verdadeiro sabor com nossos refrigerantes exclusivos.</p>
+        <a href="#services" class="mt-4 inline-block bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600">Ver Sabores</a>
+    </section>
+
+  
+    <section id="services" class="p-10 bg-white text-center">
+        <h2 class="text-2xl font-bold mb-6">Nossos Produtos</h2>
+        
+        <!-- Refrigerantes 2 Litros -->
+        
+        <div class="mb-10">
+            <h3 class="text-xl font-semibold mb-2">Refrigerantes 2 Litros</h3>
+            <hr class="border-t-2 border-gray-300 w-1/2 mx-auto mb-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <!-- Primeiro Refrigerante -->
+                <div class="relative group">
+                    <img src="/img/produtos/cola2l.png" alt="Refrigerante 2L 1" class="w-full h-45 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-[-20px] left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-xl font-semibold text-center">Cola 2L</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Segundo Refrigerante -->
+                <div class="relative group">
+                    <img src="/img/produtos/laranja2l.png" alt="Refrigerante 2L 2" class="w-full h-38 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-[-15px] left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-xl font-semibold text-center">Laranja 2L</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Terceiro Refrigerante -->
+                <div class="relative group">
+                    <img src="/img/produtos/uva2l.png" alt="Refrigerante 2L 3" class="w-full h-38 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-[-15px] left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-xl font-semibold text-center">Uva 2L</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Quarto Refrigerante -->
+                <div class="relative group">
+                    <img src="/img/produtos/limao2l.png" alt="Refrigerante 2L 4" class="w-full h-38 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-[-15px] left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-xl font-semibold text-center">Limão 2L</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Quinto Refrigerante -->
+                <div class="relative group">
+                    <img src="/img/produtos/guarana2l.png" alt="Refrigerante 2L 5" class="w-full h-38 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-[-15px] left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-xl font-semibold text-center">Guaraná 2L</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Refrigerantes 250ml -->
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Refrigerantes 250ml</h3>
+            <hr class="border-t-2 border-gray-300 w-1/2 mx-auto mb-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <img src="/img/produtos" alt="Refrigerante 250ml 1" class="w-full h-32 object-cover rounded-lg">
+                <img src="img/refri250ml-2.jpg" alt="Refrigerante 250ml 2" class="w-full h-32 object-cover rounded-lg">
+                <img src="img/refri250ml-3.jpg" alt="Refrigerante 250ml 3" class="w-full h-32 object-cover rounded-lg">
+                <img src="img/refri250ml-4.jpg" alt="Refrigerante 250ml 4" class="w-full h-32 object-cover rounded-lg">
+                <img src="img/refri250ml-5.jpg" alt="Refrigerante 250ml 5" class="w-full h-32 object-cover rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-gray-50 py-10 mt-0">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Quem Somos</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Texto -->
+                <div class="w-full md:w-1/2 text-lg text-gray-700 text-justify mb-6 md:mb-0 md:mr-12">
+                    <p>Se há algo que define o cearense, é sua capacidade de encantar o mundo com criatividade e bom humor—seja na rima, no repente, na poesia ou até mesmo na produção de refrigerantes.</p>
+    
+                    <p>Fundada em outubro de 1998 por <strong>Francisco Carvalho Soares</strong>, um cearense de origem humilde e fé inabalável, a Mais Sabor tornou-se símbolo de ousadia, determinação e sucesso. Foram muitos desafios, aprendizados e conquistas. Nos primeiros anos, a marca alcançou um feito notável: distribuir seus produtos em 100% dos municípios cearenses.</p>
+    
+                    <p>O reconhecimento não demorou a chegar. Por três anos consecutivos, a Mais Sabor foi eleita a marca de refrigerantes mais lembrada pelos cearenses na pesquisa <strong>Top of Mind do jornal O Povo</strong>, desbancando até gigantes nacionais.</p>
+    
+                    <p>Desde então, o grupo tem investido continuamente em tecnologia, qualificação profissional e diversificação de produtos, sempre com respeito ao consumidor e ao meio ambiente. Com mais de três décadas de história, a <strong>Mais Sabor</strong> segue com orgulho e energia para crescer ainda mais.</p>
+                </div>
+    
+                <!-- Imagem -->
+                <div class="w-full md:w-1/2">
+                    <img src="/img/quem-somos-gif.gif" alt="Foto da empresa" class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-8 mt-0">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-center">
+                <!-- Endereço -->
+                <div class="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0">
+                    <h5 class="text-lg font-semibold uppercase">Endereço</h5>
+                    <p class="mt-2 text-gray-300">Rua Esperanto, 1250 - Vila União</p>
+                    <p class="text-gray-300">Fortaleza - Ceará, CEP 60410-622</p>
+                </div>
+    
+                <!-- Contato -->
+                <div class="w-full md:w-1/3 text-center mb-6 md:mb-0">
+                    <h5 class="text-lg font-semibold uppercase">Contato</h5>
+                    <p class="mt-2 text-gray-300">Telefone: (85) 3444-3500</p>
+                    <p class="text-gray-300">Email: <a href="mailto:televendas@maissabor.com.br" class="text-yellow-400 hover:text-yellow-300 transition">televendas@maissabor.com.br</a></p>
+                </div>
+    
+                <!-- Redes Sociais -->
+                <div class="w-full md:w-1/3 text-center md:text-right">
+                    <h5 class="text-lg font-semibold uppercase">Siga-nos</h5>
+                    <div class="flex justify-center md:justify-end mt-3 space-x-4">
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-yellow-400 transition">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-300 hover:text-green-400 transition">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="tel:+5511999999999" class="text-gray-300 hover:text-blue-400 transition">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Linha divisória -->
+            <div class="border-t border-gray-500 my-6"></div>
+    
+            <!-- Direitos Autorais -->
+            <p class="text-center text-gray-400 text-sm">&copy; 2025 Mais Sabor. Todos os direitos reservados.</p>
+        </div>
+    </footer>   
+</body>
+</html>
